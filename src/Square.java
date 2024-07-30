@@ -1,13 +1,13 @@
 public class Square {
     private int x, y, sideLength;
 
-    private Square(int x, int y, int sideLength) {
+    public Square(int x, int y, int sideLength) {
         isPositive(sideLength);
         this.x = x;
         this.y = y;
         this.sideLength = sideLength;
     }
-    private Square(Dot dot, int sideLength){
+    public Square(Dot dot, int sideLength){
         isPositive(sideLength);
         this.x = dot.x;
         this.y = dot.y;
@@ -15,10 +15,12 @@ public class Square {
     }
 
     public void setX(int x) {
+
         this.x = x;
     }
 
     public void setY(int y) {
+
         this.y = y;
     }
     public void setDot(Dot dot){
