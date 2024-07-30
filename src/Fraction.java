@@ -45,7 +45,7 @@ public class Fraction {
     public Fraction minus(int numerator, int denominator) {
         denominatorControl(denominator);
         int newDenominator = denominator * this.denominator;
-        int newNumerator = ((numerator * this.denominator) - (this.numerator * denominator));
+        int newNumerator = ((this.numerator * denominator)-(numerator * this.denominator));
         Fraction newFraction = new Fraction(newNumerator, newDenominator);
         return newFraction;
     }
