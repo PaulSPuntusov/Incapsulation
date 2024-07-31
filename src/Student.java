@@ -4,13 +4,14 @@ public class Student {
     String name;
     private int[] grades = null;
 
-    private Student( int[] grades) {
+    private Student(String name, int[] grades) {
         gradesCheck(grades);
         this.grades = grades;
     }
 
     private Student(String name) {
-        this.name;
+        this.name = name;
+        this.grades = null;
     }
 
     public void setName(String name) {
@@ -40,7 +41,8 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "Имя='" + name +
+                "оценки"+ Arrays.toString(grades)+
                 '}';
     }
 }
