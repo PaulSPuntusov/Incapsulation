@@ -6,7 +6,7 @@ public class Department {
     private Department(String depName,String bossName) {
         this.depName = depName;
         this.bossName = bossName;
-        Employee boss = new Employee(bossName,this);
+        Employee boss = Employee.setEmployee(bossName,this);
         this.boss = boss;
     }
 
@@ -14,6 +14,7 @@ public class Department {
         return depName;
     }
     public static Department setDep(String depName,String bossName){
+
         return new Department(depName,bossName);
     }
 

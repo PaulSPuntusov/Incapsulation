@@ -2,25 +2,14 @@ public class Employee {
     private String name;
     private Department dep;
 
-    public Employee(String name, Department dep) {
+    private Employee(String name, Department dep) {
         this.name = name;
         this.dep = dep;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Department getDep() {
-        return dep;
-    }
-
-    public void setDep(Department dep) {
-        this.dep = dep;
+    public static Employee setEmployee(String name, Department dep){
+        return new Employee(name,dep);
     }
 
     @Override
