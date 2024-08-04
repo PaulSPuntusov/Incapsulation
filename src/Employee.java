@@ -2,14 +2,29 @@ public class Employee {
     private String name;
     private Department dep;
 
-    private Employee(String name, Department dep) {
+    public Employee(String name, Department dep) {
         this.name = name;
         this.dep = dep;
     }
 
+    public Employee(String name) {
+        this(name, null);
+    }
 
-    public static Employee setEmployee(String name, Department dep){
-        return new Employee(name,dep);
+    public String getName() {
+        return name;
+    }
+
+    public Department getDep() {
+        return dep;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDep(Department dep) {
+        this.dep = dep;
     }
 
     @Override
@@ -17,7 +32,7 @@ public class Employee {
         if (dep.getBoss() == this) {
             return "Начальник " + name + " руководит отделом " + dep.getDepName();
         } else
-            return "Сотрудник" +
+            return "Сотрудник " +
                     "Имя: '" + name + '\'' +
                     ", Работает в отделе " + dep.getDepName() + " Начальник отдела: " +
                     dep.getBoss().name;

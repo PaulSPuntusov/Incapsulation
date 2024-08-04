@@ -2,10 +2,22 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Department it = Department.setDep("IT", "Vasya");
-        Employee e1 = Employee.setEmployee("Petya",it);
-        System.out.println(e1.toString());
-        System.out.println(it.getBoss().toString());
+        Employee it1 = new Employee("Vasya");
+        Department it = new Department("IT",it1);
+        it1.setDep(it);
+        Employee it2 = new Employee("Kolya",it);
+        Department sales = new Department("Sales");
+        Employee s1 = new Employee("Sasha",sales);
+        Employee s2 = new Employee("Zhenya",sales);
+        sales.setBoss(s1);
+        System.out.println(it1.toString());
+        System.out.println(it2.toString());
+        it.setBoss(it2);
+        System.out.println(it1.toString());
+        System.out.println(it2.toString());
+        it.setBoss(s2);
+        System.out.println(it1.toString());
+        System.out.println(it2.toString());
 
     }
 }
