@@ -12,12 +12,18 @@ public class Main {
         sales.setBoss(s1);
         System.out.println(it1.toString());
         System.out.println(it2.toString());
+        System.out.println(s1.toString());
+        System.out.println(s2.toString());
         it.setBoss(it2);
         System.out.println(it1.toString());
         System.out.println(it2.toString());
+        System.out.println(s1.toString());
+        System.out.println(s2.toString());
         it.setBoss(s2);
+        Department construction = new Department("Construction",s2);
         System.out.println(it1.toString());
         System.out.println(it2.toString());
-
+        System.out.println(s1.toString());
+        System.out.println(s2.toString());
     }
 }

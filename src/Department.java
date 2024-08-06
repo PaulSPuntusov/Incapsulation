@@ -23,7 +23,14 @@ public class Department {
         this.depName = depName;
     }
 
+    public void bossDepCheck(Employee boss) {
+        if (boss.getDep() != this) {
+            boss.setDep(this);
+        }
+    }
+
     public void setBoss(Employee boss) {
+        bossDepCheck(boss);
         this.boss = boss;
     }
 }
