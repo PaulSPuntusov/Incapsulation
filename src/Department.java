@@ -4,6 +4,9 @@ public class Department {
 
     public Department(String depName, Employee boss) {
         this.depName = depName;
+        if ((boss != null) && (boss.getDep() != this)) {
+            bossDepCheck(boss);
+        }
         this.boss = boss;
     }
 
