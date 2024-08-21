@@ -1,6 +1,8 @@
-public class Employee {
-    private String name;
-    private Department dep;
+package Eployee;
+
+ class Employee {
+     protected String name;
+     protected Department dep;
 
     public Employee(String name, Department dep) {
         this.name = name;
@@ -11,30 +13,14 @@ public class Employee {
         this(name, null);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Department getDep() {
-        return dep;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDep(Department dep) {
-        this.dep = dep;
-    }
-
     @Override
     public String toString() {
-        if (dep.getBoss() == this) {
-            return "Начальник " + name + " руководит отделом " + dep.getDepName();
+        if (dep.boss == this) {
+            return "Начальник " + name + " руководит отделом " + dep.depName;
         } else
             return "Сотрудник " +
                     "Имя: '" + name + '\'' +
-                    ", Работает в отделе " + dep.getDepName() + " Начальник отдела: " +
-                    dep.getBoss().name;
+                    ", Работает в отделе " + dep.depName + " Начальник отдела: " +
+                    dep.boss.name;
     }
 }
